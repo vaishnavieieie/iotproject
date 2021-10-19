@@ -1,0 +1,38 @@
+body{
+    background-color: white;
+    }
+body {font-family: Arial, Helvetica, sans-serif}
+h1, h2, h3, h4, h5, h6 {
+  font-family: serif;
+  letter-spacing: 5px;
+}
+
+#about,#contact{
+  background-color: #ECE2E1;
+  border-radius: 20px;
+}
+
+#contributors{
+  background-color: #d3e0dc;
+  border-radius: 20px;
+}
+
+.jumbotron{
+  padding: 10%;
+  background-image: url("/images/home.jpg");
+  background-size:cover;
+  align-items: left;
+}
+
+.jumbotron-content,h1,h2{
+  color: white;
+  /* text-align: center; */
+
+}
+#button1,#button2{
+  display: inline-block;
+  position: absolute;
+}
+#button2{
+  margin-left: 150px;
+}

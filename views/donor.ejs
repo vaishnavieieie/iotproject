@@ -1,0 +1,83 @@
+<%- include("header")-%>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/donor.css">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Donate Start -->
+    <div class="container">
+        <div class="donate" >
+            <div class="row align-items-center">
+                <div class="col-lg-7">
+                    <div class="donate-content">
+                        <div class="section-header">
+                            <p>Donate Now</p>
+                            <h2>Let's donate to needy people for better lives</h2>
+                        </div>
+                        <div class="donate-text">
+                            <p>
+                                Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non. Aliquam metus tortor, auctor id gravida, viverra quis sem. Curabitur non nisl nec nisi maximus. Aenean convallis porttitor. Aliquam interdum at lacus non blandit.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="donate-form">
+                        <form method="POST" action="/auth/donor" enctype="multipart/form-data">
+                            <!-- <div class="control-group">
+                                <input type="text" class="form-control" placeholder="Name" required="required" name="name"/>
+                            </div> -->
+                            <div class="control-group">
+                                <input type="text" class="form-control" placeholder="Location" required="required" name="location"/>
+                            </div>
+                            <div class="control-group">
+                                <input type="text" class="form-control" placeholder="Address" required="required" name="address"/>
+                            </div>
+                            <div class="control-group">
+                                <input type="tel" class="form-control" placeholder="Phone Number" required="required" name="number"/>
+                            </div>
+                            <!-- <div class="control-group">
+                                <input type="email" class="form-control" placeholder="Email" required="required" />
+                            </div> -->
+                            <div class="control-group">
+                                
+                                <label for="story">
+<!-- 
+                                <textarea id="story" name="description"
+                                          rows="5" cols="46"  required="required">
+                                </textarea> -->
+                                <textarea name="description" rows="10" cols="46" required="required"></textarea>
+                            </label>
+                            </div>
+                          
+                            <div class="control-group">
+                                <label for="mob_no" class="col-md-3 control-label">Image</label>
+                                <div class="col-sm-9">
+                                    <input class="form-control" type="file" name="uploaded_image" accept="image/png, image/jpeg ,image/jpg"/>
+                                </div>
+                            </div>        
+                            <div>
+                                
+                                   
+                                    <label for="quantity" p style="color:white"> Enter No of People:</label>
+                                    <input type="number" id="quantity" name="quantity" min="1" max="100" required="required">
+                                   
+                                </div>
+                            <div>
+                                <button class="btn btn-custom" type="submit">Donate Now</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Donate End -->
+</body>
+</html>
+<%- include("footer")-%>

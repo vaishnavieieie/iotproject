@@ -1,0 +1,82 @@
+<%- include("header")-%>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipient page</title>
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+    <style>
+        .post-div{
+            padding: 50px;
+           
+        }
+    </style>
+</head>
+ 
+    <!-- Event Start -->
+    <div class="event">
+        <div class="container">
+            <div class="section-header text-center">
+                <p>Latest Posts</p>
+                <h2>We are thankful for our donors</h2>
+                <!-- for sorting elements according to location -->
+                <form action="/auth/sorting" method="POST">
+                    <div class="control-group col">
+                        <input type="text" class="form-control" placeholder="Add location" required="required" name="sorting"/>
+                        <button class="btn btn-custom" type="submit">Sort</button>
+                    </div>
+                </form>
+                
+                
+            </div>
+            <div class="row">
+                    
+                    <%posts.forEach(function(post){%>
+                        <div class="col-lg-6">
+                            <div class="event-item">
+                                <h1 hidden><%=post.id%></h1>
+                                <img src="/donor-images/<%=post.image%>" height=400 width=690 alt="Image">
+                                <div class="event-content">
+                                    <div class="event-meta">
+                                        <p><i class="fa fa-calendar-alt"></i><%=post.datetime%></p>
+                                        <!-- <p><i class="far fa-clock"></i>8:00 - 10:00</p> -->
+                                        <p><i class="fa fa-map-marker-alt"></i><%=post.location%></p>
+                                        <p><i class="fa fa-map-marker-alt"></i><%=post.address%></p>
+                                    </div>
+                                    <div class="event-text">
+                                        <h5> Username : <%=post.name%></h5>
+                                        <h5> Phone no : <%=post.number%></h5>
+                                        
+                                        <h3>Food Packet Donation</h3>
+                                        <div class="col-lg-6" style="word-wrap: break-word;height: 100px;overflow: auto;">
+                                            <p>
+                                                <%=post.description%>
+                                                
+                                            </p>
+                                            
+                                        </div>
+                                        <h5> No of people : <%=post.people%></h5>
+                                        <!-- users can't claim or interact on their own posts add if -->
+                                        
+                                       <form action="/auth/claim" method="POST">
+                                        <input hidden value="<%=post.id%>" name="postid">
+                                         <button class="btn btn-custom" type="submit" >Claim</button>
+                                       </form>
+                                        
+                                        <a class="btn btn-custom" value="SUBMIT EMAIL TO:" href="mailto:<%=post.email%>>">Email</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <%});%>
+                    
+                
+            </div>
+        </div>
+    </div>
+    <!-- Event End -->
+</body>
+<%- include("footer")-%>
+</html>

@@ -1,0 +1,143 @@
+<%- include("header")-%>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In & Sign Up</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/register1.css">
+    <style>
+      
+    </style>
+</head>
+<body>
+  
+  <div class="" >
+    <div class="container" style="margin-right: 80%;margin-top: 20%;">
+        <input type="checkbox" id="toggle">
+        <div class="signin">
+            <h1>Sign In</h1>
+            <form action="/auth/login" method="POST">
+                <div class="social1">
+                    <a href="https://accounts.google.com/servicelogin"><i class="fab fa-google-plus-g"></i></a>
+                    <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.linkedin.com/signup"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <p>Or use enter info</p>
+                <% if (locals.message){%>
+                    <div class=""style="display: flex;
+                    justify-content: center">
+                        <h4 style="color: white"><%=message%></h4>
+                    </div>
+                    <%}%>
+                <input type="email" placeholder="Email" name="email" required>
+                <input type="password" placeholder="Password" name="psw" required>
+                <!-- <small>Forgot Password?</small> -->
+                <div style="display: flex;
+                justify-content: center">
+                    <input type="submit" value="Login">
+                    <!-- <input type="checkbox"><span>Remember Me</span>  -->
+                    
+                </div>
+                
+                
+                <small>Don't have an account? <label for="toggle">Sign-Up</label> </small>
+            </form>
+        </div>
+
+        <div class="signup">
+            <h1>Create an account</h1>
+            <form name="registerForm" action="/auth/register" method="POST" onsubmit=" return registerValidate()">
+                <div class="social1">
+                    <a href="https://gmail.com"><i class="fab fa-google-plus-g"></i></a>
+                    <a href="https://facebook.com"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://linkedin.com"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                 <p>Or Enter your details </p>
+                 <% if (locals.message){%>
+                    <div class=""style="display: flex;
+                    justify-content: center">
+                        <h4 style="color: white"><%=message%></h4>
+                    </div>
+                    <%}%>
+                    <input type="text" placeholder="Name" name="name" required>
+                    <input type="email" placeholder="Email" name="email" required>
+                    <input type="password" placeholder="Password" name="psw" required>
+                    <input type="password" placeholder="Confirm Password" name="pswrepeat" required>
+                    <div style="display: flex;
+                    justify-content: center">
+                        <input type="submit" value="Create account">
+                        <!-- <input type="checkbox"><span>Remember Me</span>  -->
+                        
+                    </div>
+                    
+                    <small>Already have an account? <label for="toggle">Sign-In</label></small>
+            </form>
+        </div>
+    </div>
+</div>
+    <script>
+      //to validate registration
+     function registerValidate(){
+         let namev=document.forms["registerForm"]["name"].value;
+         let emailv=document.forms["registerForm"]["email"].value;
+         let pswv=document.forms["registerForm"]["psw"].value;
+         console.log(emailv)
+         //email validation
+         if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(emailv))
+         {
+                if(pswv.length>=6 && pswv.length<=12) 
+                { 
+                // alert()
+                return (true);
+                }
+                else
+                { 
+                alert('Try a password with length 6 to 12!')
+                return (false);
+                }
+         }
+         else{
+             alert("You have entered an invalid email address!")
+             return (false)
+         }
+             
+         //password validation
+         //var passw = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/;
+        //  if(pswv.length>=6 && pswv.length<=12) 
+        //  { 
+        // // alert()
+        //  return (true);
+        //  }
+        //  else
+        //  { 
+        //  alert('Try a password with length 6 to 12!')
+        //  return (false);
+        //  }
+ 
+     }
+ 
+ 
+     
+     </script>
+     <!-- JavaScript Libraries -->
+     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+     <script src="/lib/easing/easing.min.js"></script>
+     <script src="/lib/owlcarousel/owl.carousel.min.js"></script>
+     <script src="/lib/waypoints/waypoints.min.js"></script>
+     <script src="/lib/counterup/counterup.min.js"></script>
+     <script src="/lib/parallax/parallax.min.js"></script>
+     
+     <!-- Contact Javascript File -->
+     <!-- <script src="/mail/jqBootstrapValidation.min.js"></script> -->
+     <!-- <script src="/mail/contact.js"></script> -->
+
+     <!-- Template Javascript -->
+     <script src="/js/main.js"></script>
+
+</body>
+</html>

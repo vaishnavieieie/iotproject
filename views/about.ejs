@@ -1,0 +1,425 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>HandsToServe </title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content=" Website Template" name="keywords">
+        <meta content="Website Template" name="description">
+
+        <!-- Favicon -->
+        <link href="/img/favicon.ico" rel="icon">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- CSS Libraries -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+  <link href="/lib/flaticon/font/flaticon.css" rel="stylesheet">
+  <link href="/lib/animate/animate.min.css" rel="stylesheet">
+  <link href="/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  
+  <!-- Template Stylesheet -->
+  <link href="/css/style.css" rel="stylesheet">
+   
+    </head>
+
+    <body>
+        <!-- top bar -->
+        <div class="top-bar d-none d-md-block">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="top-bar-left">
+                            <div class="text">
+                                <i class="fa fa-phone-alt"></i>
+                                <p>+123 456 7890</p>
+                            </div>
+                            <div class="text">
+                                <i class="fa fa-envelope"></i>
+                                <p>HTS@geemail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="top-bar-right">
+                            <div class="social">
+                                <a href=""><i class="fab fa-twitter"></i></a>
+                                <a href=""><i class="fab fa-facebook-f"></i></a>
+                                <a href=""><i class="fab fa-linkedin-in"></i></a>
+                                <a href=""><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+          <!-- Top Bar End -->
+          
+          <!-- Nav Bar Start -->
+          <div class="navbar navbar-expand-lg bg-dark navbar-dark">
+            <div class="container-fluid">
+                <a href="/" class="navbar-brand">HandsToServe</a>
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+          
+                <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                  <div class="navbar-nav ml-auto">
+                    <a href="/" class="nav-item nav-link active">Home</a>
+                    <a href="/about" class="nav-item nav-link">About</a>
+                    <a href="/register" class="nav-item nav-link">Login/Sign-up</a>
+                    
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
+                        <div class="dropdown-menu">
+                            <a href="/service" class="dropdown-item">Detail Page</a>
+                            <!-- <a href="#" class="dropdown-item">What We Do</a> -->
+                            <a href="#" class="dropdown-item">Meet The Team</a>
+                            <a href="/donor" class="dropdown-item">Donate Now</a>
+                            <a href="/recipient" class="dropdown-item">Find a Donor</a>
+                        </div>
+                    </div>
+                    <a href="/contact" class="nav-item nav-link">Contact</a>
+                    <%if(locals.sess){%>
+                        <a href="/account" class="nav-item nav-link">Account</a>
+                      <a href="/logout" class="nav-item nav-link">Logout</a>
+                    <%}%>
+                </div>
+                </div>
+            </div>
+          </div>
+          <!-- Nav Bar End -->
+          <!-- Page Header Start -->
+          <div class="page-header">
+            <div class="container">
+                <div class="row">
+                    <!-- <div class="col-12">
+                        <h2>Donate Now</h2>
+                    </div> -->
+                    <!-- <div class="col-12">
+                        <a href="">Home</a>
+                        <a href="">Donate</a>
+                    </div> -->
+                </div>
+            </div>
+          </div>
+          <!-- Page Header End -->
+       
+
+        <!-- About Start -->
+        <div class="about">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="about-img" data-parallax="scroll" data-image-src="img/d.jpg"></div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="section-header">
+                            <p>Learn About Us</p>
+                            <h2>Worldwide non-profit charity organization</h2>
+                        </div>
+                        <div class="about-tab">
+                            <ul class="nav nav-pills nav-justified">
+                                <li class="nav-item">
+                                    <a class="nav-link active" data-toggle="pill" href="#tab-content-1">About</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="pill" href="#tab-content-2">Mission</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="pill" href="#tab-content-3">Vision</a>
+                                </li>
+                            </ul>
+
+                            <div class="tab-content">
+                                <div id="tab-content-1" class="container tab-pane active">
+                                     <p>Nearly 40 per cent of the food produced in India is wasted every year due to fragmented food systems and inefficient supply chains — a figure estimated by the Food and Agricultural Organisation (FAO). This is the loss that occurs even before the food reaches the consumer.</p><p> Hands To Serve is a non profit organisation aiming to curb problems such as Hunger, Starvation and Food wastage through an active-modern intiative,
+                                        A food based Web-App.</p>
+                                    It’s  devastating to consider  there are hundreds of thousands of Indians who struggle to bring enough food home to feed their families. While these numbers may feel overwhelming, Our  app is striving to reduce the amount of waste and redistribute it to those who need it. Donate today and start making a difference right now.</p>
+                                </div>
+                                <div id="tab-content-2" class="container tab-pane fade">
+                                    <p>Hands To Serve’s mission is to reduce food waste, thereby reducing hunger and improving the environment.</p>
+
+ 
+
+                                    <p>Hands To Serve’s goal is to encourage the highest use of wholesome unmarketable food, through the development of sustainable public-private partnerships between food companies, food charities, and other waste diverters with a focus on bridging the technology, communication and infrastructure gap that results in large amounts of food waste.<p>
+                                    
+                                     
+                                    
+                                   <p> Through our Web-App we help connect food donors with recipients to provide meals or groceries to food insecure people, the elderly or children.</p>
+                                   
+                                    <p>Through educational blogs & awareness campaigns we educate businesses, community organizations and consumers about food waste and sustainability.</p>
+                                </div>
+                                <div id="tab-content-3" class="container tab-pane fade">
+                                    The vision of HandsToServe is a waste-less food system.<p> We want to reach this by creating easy, environmentally and economically viable alternatives to wasting food.</p> The HandsToServe App connects donors and consumers in this fight against food waste. <p>Donors offer their left-over meals to App users.</p> <p>The HandsToServe App shows users the donors in proximity,with a facility to choose their location for meals. </p><p>HandsToServe provides email verification as soon as a claim has been made so that Donors can make the donation as soon as possible.</p> <p>This incentive to reduce food waste is a triple-win-situation: for the donors with excessive food, for the eaters, and for the environment.<p> We are striving to extend the solution to various kinds of gastronomy businesses such as the catering and hotel industry.</p> Overall, we believe in the power of partnerships to multiply knowledge and resources, and prevent food waste for good.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- About End -->
+        
+        
+        <!-- Facts Start -->
+        <div class="facts" data-parallax="scroll" data-image-src="img/facts.jpg">
+            <!-- <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="facts-item">
+                            <i class="flaticon-home"></i>
+                            <div class="facts-text">
+                                <h3 class="facts-plus" data-toggle="counter-up">150</h3>
+                                <p>Countries</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="facts-item">
+                            <i class="flaticon-charity"></i>
+                            <div class="facts-text">
+                                <h3 class="facts-plus" data-toggle="counter-up">400</h3>
+                                <p>Volunteers</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="facts-item">
+                            <i class="flaticon-kindness"></i>
+                            <div class="facts-text">
+                                <h3 class="facts-dollar" data-toggle="counter-up">10000</h3>
+                                <p>Our Goal</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="facts-item">
+                            <i class="flaticon-donation"></i>
+                            <div class="facts-text">
+                                <h3 class="facts-dollar" data-toggle="counter-up">5000</h3>
+                                <p>Raised</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+        <!-- Facts End -->
+
+
+        <!-- Team Start -->
+        <div class="team">
+            <div class="container">
+                <div class="section-header text-center">
+                    <p>Meet Our Team</p>
+                    <h2>Awesome guys behind our charity activities</h2>
+                </div>
+                <div class="row" style="display: flex;
+                justify-content: center;">
+                    
+                    <div class="col-lg-3 col-md-6">
+                        <div class="team-item">
+                            <div class="team-img">
+                                <img src="img/team-2.jpg" alt="Team Image">
+                            </div>
+                            <div class="team-text">
+                                <h2>Vaishnavi Kamath</h2>
+                                <p>Founder</p>
+                                <div class="team-social">
+                                    <a href=""><i class="fab fa-twitter"></i></a>
+                                    <a href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a href=""><i class="fab fa-linkedin-in"></i></a>
+                                    <a href=""><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="team-item">
+                            <div class="team-img">
+                                <img src="img/team-3.jpg" alt="Team Image">
+                            </div>
+                            <div class="team-text">
+                                <h2>Nisha Kini</h2>
+                                <p>CEO</p>
+                                <div class="team-social">
+                                    <a href=""><i class="fab fa-twitter"></i></a>
+                                    <a href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a href=""><i class="fab fa-linkedin-in"></i></a>
+                                    <a href=""><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                            
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Team End -->
+        
+        
+        <!-- Testimonial Start -->
+        <div class="testimonial">
+            <div class="container">
+                <div class="section-header text-center">
+                    <p>Testimonial</p>
+                    <h2>Hear From Our Contributors.</h2>
+                </div>
+                <div class="owl-carousel testimonials-carousel">
+                    <div class="testimonial-item">
+                        <div class="testimonial-profile">
+                            <img src="img/testimonial-1.jpg" alt="Image">
+                            <div class="testimonial-name">
+                                <h3>Hrithik Roshan</h3>
+                                <p>Actor</p>
+                            </div>
+                        </div>
+                        <div class="testimonial-text">
+                            <p>
+                                Food Wastage is a colossal problem in India.Ever Since this initiative began, I've been truly grateful regarding the amount of food that gets upcycled, Thank you HandsToServe.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="testimonial-item">
+                        <div class="testimonial-profile">
+                            <img src="img/testimonial-2.jpg" alt="Image">
+                            <div class="testimonial-name">
+                                <h3>Sara Ali Khan</h3>
+                                <p>Actor</p>
+                            </div>
+                        </div>
+                        <div class="testimonial-text">
+                            <p>
+                                Every Donation Counts! Thank you to all the donors who've taken the initiative to donate and to the creators of this App, Thank you HandsToServe.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="testimonial-item">
+                        <div class="testimonial-profile">
+                            <img src="img/testimonial-3.jpg" alt="Image">
+                            <div class="testimonial-name">
+                                <h3>Ananya Panday</h3>
+                                <p>Actor</p>
+                            </div>
+                        </div>
+                        <div class="testimonial-text">
+                            <p>
+                               Too many cases of hunger and starvation are highlighted, I'm thankful for such food wastage apps, that help benefit our environment, Thank you HandsToServe.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="testimonial-item">
+                        <div class="testimonial-profile">
+                            <img src="img/testimonial-4.jpg" alt="Image">
+                            <div class="testimonial-name">
+                                <h3>Katrina Kaif</h3>
+                                <p>Actor</p>
+                            </div>
+                        </div>
+                        <div class="testimonial-text">
+                            <p>
+                                I'm grateful to have learnt about this Web-App, Hoping my contribution makes a difference, Thanks HandsToServe.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Testimonial End -->
+
+
+        <!-- Footer Start -->
+     
+        <<div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-contact">
+                            <h2>Our Head Office</h2>
+                            <p><i class="fa fa-map-marker-alt"></i>824 Street, Worli, Mumbai</p>
+                            <p><i class="fa fa-phone-alt"></i>+012 345 67890</p>
+                            <p><i class="fa fa-envelope"></i>HTS@geemail.com</p>
+                            <div class="footer-social">
+                                <a class="btn btn-custom" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-custom" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-custom" href=""><i class="fab fa-youtube"></i></a>
+                                <a class="btn btn-custom" href=""><i class="fab fa-instagram"></i></a>
+                                <a class="btn btn-custom" href=""><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-link">
+                            <h2>Popular Links</h2>
+                            <a href="">About Us</a>
+                            <a href="">Contact Us</a>
+                            
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-link">
+                            <h2>Useful Links</h2>
+                            <a href="">Terms of use</a>
+                            <a href="">Privacy policy</a>
+                            
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-newsletter">
+                           
+                            <form>
+                                
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container copyright">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>&copy; <a href="#">HandsToServe</a>, All Right Reserved.</p>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+        <!-- Back to top button -->
+        <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+        
+        <!-- Pre Loader -->
+        <div id="loader" class="show">
+            <div class="loader"></div>
+        </div>
+
+
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="lib/waypoints/waypoints.min.js"></script>
+        <script src="lib/counterup/counterup.min.js"></script>
+        <script src="lib/parallax/parallax.min.js"></script>
+        
+        <!-- Contact Javascript File -->
+        <script src="mail/jqBootstrapValidation.min.js"></script>
+        <script src="mail/contact.js"></script>
+
+        <!-- Template Javascript -->
+        <script src="js/main.js"></script>
+        
+
+    </body>
+</html>
