@@ -5,6 +5,8 @@ const authdonor=require("../controllers/donor");
 const authdeletepost=require("../controllers/deletepost");
 const authsorting=require("../controllers/sorting");
 const authclaim=require("../controllers/claim");
+const authcontact=require("../controllers/contact");
+
 //new user registration  
 router.post("/register", authcontroller.register);
   
@@ -24,6 +26,9 @@ router.post("/sorting",authsorting.sorting);
 
 //user claim
 router.post("/claim",authclaim.claim);
+
+//contact form
+router.post("/contact",authcontact.contact);
 
 
   module.exports=router;

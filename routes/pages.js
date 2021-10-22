@@ -195,7 +195,13 @@ router.get("/account",(req,res)=>{
 
 //services page
 router.get("/service",(req,res)=>{
-  res.render("service",{sess:"Yes"})
+  if(req.session.loggedin){
+    res.render("service",{sess:"Yes"})
+  }
+  else{
+    res.render("service")
+  }
+  
 });
 
 //contacts page

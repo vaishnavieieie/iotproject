@@ -108,8 +108,8 @@ app.get("/contact",(req,res)=>{
 
 app.post("/", function (req, res) {});
 
-const https=require("https")
-const NewsAPI=require("newsapi")
+// const https=require("https")
+// const NewsAPI=require("newsapi")
 
 //news
 app.get("/news",function(req,res){
